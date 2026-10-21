@@ -15,7 +15,7 @@ From the monorepo:
 
 ```toml
 [dependencies]
-ignite-api-client = { git = "https://git.zyneonstudios.com/elizon/api-client-rust.git" }
+ignite-api-client = { git = "https://github.com/ATT-IT-Cloud-Services/api-client-rust.git" }
 tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
 ```
 
