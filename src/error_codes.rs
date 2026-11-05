@@ -1156,6 +1156,7 @@ pub const INVOICE_HANDED_TO_COLLECTION: &str = "invoiceHandedToCollection";
 pub const INVOICE_HAS_NO_LINKED_LEXWARE_DOCUMENT: &str = "invoiceHasNoLinkedLexwareDocument";
 pub const INVOICE_NOT_FOUND: &str = "invoiceNotFound";
 pub const INVOICE_NOT_FOUND2: &str = "invoiceNotFound2";
+pub const INVOICE_PAYMENT_BLOCKED_FOR_ACCOUNT: &str = "invoicePaymentBlockedForAccount";
 pub const INVOICE_WAS_NOT_PAID: &str = "invoiceWasNotPaid";
 pub const INVOICE_WAS_VOIDED_AND_CANNOT_BE_PAID: &str = "invoiceWasVoidedAndCannotBePaid";
 pub const INVOICING_PROVIDER_OPERATION_UNSUPPORTED: &str = "invoicingProviderOperationUnsupported";
