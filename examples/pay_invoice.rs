@@ -47,10 +47,10 @@ async fn main() {
 
 async fn run(client: &IgniteClient, invoice_id: &str) -> Result<(), IgniteError> {
     let detail = client.billing.invoice(invoice_id).await?;
-    println!(
-        "Invoice: {} {} {}",
-        detail.invoice.id, detail.invoice.status, detail.invoice.total
-    );
+    // Identifiers, amounts and payment URLs stay out of stdout: the invoice id is
+    // personal data, and a checkout URL / payment id is a bearer secret that an
+    // example run would otherwise leave in terminal scrollback and CI logs.
+    println!("Invoice status: {}", detail.invoice.status);
 
     let methods = client.billing.payment_methods().await?;
     println!("Saved payment methods: {}", methods.methods.len());
@@ -74,15 +74,12 @@ async fn run(client: &IgniteClient, invoice_id: &str) -> Result<(), IgniteError>
         )
         .await?;
 
-    if let Some(url) = result.checkout_url {
-        println!("Redirect to payment: {url}");
+    if result.checkout_url.is_some() {
+        println!("Checkout URL received — open it in a browser (not printed here).");
     } else if result.already_paid.unwrap_or(false) {
         println!("Invoice already paid.");
     } else {
-        println!(
-            "Payment initiated: {}",
-            result.payment_id.as_deref().unwrap_or("processing")
-        );
+        println!("Payment initiated.");
     }
 
     Ok(())
