@@ -68,6 +68,22 @@ impl SupportResource {
         self.transport.get("/knowledge-base", query).await
     }
 
+    /// Review prompts the customer should see on the dashboard right now
+    /// (`GET /feedback/prompts`): `{ enabled, queue }`, newest object first.
+    pub async fn review_prompts(&self) -> Result<Value, IgniteError> {
+        self.transport.get("/feedback/prompts", None).await
+    }
+
+    /// Never ask for a review of this object again
+    /// (`POST /feedback/prompts/dismiss`). Pass exactly one of
+    /// `ticketId` / `serviceId`.
+    pub async fn dismiss_review_prompt(
+        &self,
+        body: Option<Value>,
+    ) -> Result<Value, IgniteError> {
+        self.transport.post("/feedback/prompts/dismiss", body).await
+    }
+
     // <generated-openapi>
     /// Generated `GET /feedback`.
     pub async fn list(

@@ -5,7 +5,8 @@ use crate::config::query_params;
 use crate::error::IgniteError;
 use crate::models::{
     ApiKeysListResponse, AuditLogResponse, CreateApiKeyRequest, CreateApiKeyResponse,
-    GdprExportCheckResponse, GdprExportConfirmRequest, SuccessResponse, SupportPinResponse,
+    CreateMcpCredentialRequest, CreateMcpCredentialResponse, GdprExportCheckResponse,
+    GdprExportConfirmRequest, McpCredentialsListResponse, SuccessResponse, SupportPinResponse,
 };
 use crate::transport::{encode_path, HttpTransport};
 
@@ -67,6 +68,38 @@ impl UserResource {
     pub async fn revoke_api_key(&self, id: &str) -> Result<SuccessResponse, IgniteError> {
         let query = query_params(&[("id", json!(id))]);
         self.transport.delete("/api-keys", Some(query), None).await
+    }
+
+    pub async fn mcp_credentials(
+        &self,
+        page: u64,
+        page_size: u64,
+    ) -> Result<McpCredentialsListResponse, IgniteError> {
+        let query = query_params(&[("page", json!(page)), ("pageSize", json!(page_size))]);
+        self.transport.get("/mcp-credentials", Some(query)).await
+    }
+
+    pub async fn create_mcp_credential(
+        &self,
+        name: &str,
+        scopes: Vec<String>,
+        expires_in_days: Option<u32>,
+    ) -> Result<CreateMcpCredentialResponse, IgniteError> {
+        self.transport
+            .post(
+                "/mcp-credentials",
+                Some(serde_json::to_value(CreateMcpCredentialRequest {
+                    name: name.to_string(),
+                    scopes,
+                    expires_in_days,
+                })?),
+            )
+            .await
+    }
+
+    pub async fn revoke_mcp_credential(&self, id: &str) -> Result<SuccessResponse, IgniteError> {
+        let query = query_params(&[("id", json!(id))]);
+        self.transport.delete("/mcp-credentials", Some(query), None).await
     }
 
     pub async fn support_pin(&self) -> Result<SupportPinResponse, IgniteError> {

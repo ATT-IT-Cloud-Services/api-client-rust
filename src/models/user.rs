@@ -76,3 +76,59 @@ pub struct CreateApiKeyResponse {
     pub api_key: ApiKey,
     pub secret: String,
 }
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
+pub struct McpRequestingIp {
+    pub ip: String,
+    pub first_seen_at: String,
+    pub last_seen_at: String,
+    pub hit_count: u64,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
+pub struct McpCredential {
+    pub id: String,
+    pub name: String,
+    pub token_prefix: String,
+    pub scopes: Vec<String>,
+    pub created_at: String,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub last_used_at: Option<String>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub expires_at: Option<String>,
+    pub request_count: u64,
+    #[serde(default)]
+    pub requesting_ips: Vec<McpRequestingIp>,
+    pub ip_count: u64,
+    /// Only present in the create response — the token is shown once.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub token: Option<String>,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
+pub struct McpCredentialsListResponse {
+    pub success: bool,
+    pub mcp_credentials: Vec<McpCredential>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub total: Option<u64>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub max_mcp_credentials: Option<u64>,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct CreateMcpCredentialRequest {
+    pub name: String,
+    pub scopes: Vec<String>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub expires_in_days: Option<u32>,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
+pub struct CreateMcpCredentialResponse {
+    pub success: bool,
+    pub mcp_credential: McpCredential,
+}

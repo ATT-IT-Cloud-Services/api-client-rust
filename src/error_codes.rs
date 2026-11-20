@@ -55,6 +55,8 @@ pub const ADMIN_ORDERS_HAVE_NO_LEXWARE_INVOICE2: &str = "adminOrdersHaveNoLexwar
 pub const ADMIN_SCHEDULED_PERCENT_DISCOUNT_ADDITIONAL_MONTHS_AFTER_FIRST_DISCOUNTE: &str = "adminScheduledPercentDiscountAdditionalMonthsAfterFirstDiscounte";
 pub const ADMIN_SCHEDULED_PERCENT_DISCOUNT_MUST_BE_AN_OBJECT_OR_NULL: &str = "adminScheduledPercentDiscountMustBeAnObjectOrNull";
 pub const ADMIN_SCHEDULED_PERCENT_DISCOUNT_PERCENT_MUST_BE_BETWEEN0_AND100: &str = "adminScheduledPercentDiscountPercentMustBeBetween0And100";
+pub const ADMIN_UPGRADE_EXCEEDS_CATEGORY_LIMIT: &str = "adminUpgradeExceedsCategoryLimit";
+pub const ADMIN_UPGRADE_MIXED_DIRECTION_NOT_ALLOWED: &str = "adminUpgradeMixedDirectionNotAllowed";
 pub const ADMINS_CANNOT_BE_DELETED: &str = "adminsCannotBeDeleted";
 pub const ADMINS_CANNOT_BE_DOWNGRADED_TO_A_LOWER_ROLE: &str = "adminsCannotBeDowngradedToALowerRole";
 pub const ADMINS_CANNOT_BE_SUSPENDED_OR_STATUS_CHANGED: &str = "adminsCannotBeSuspendedOrStatusChanged";
@@ -265,6 +267,8 @@ pub const CANNOT_UNLINK_LAST_LOGIN_METHOD_SET_A_PASSWORD_FIRST_OR_LINK_ANOTHER_A
 pub const CART_EMPTY: &str = "cartEmpty";
 pub const CASE_NOT_FOUND: &str = "caseNotFound";
 pub const CASE_NUMBER_AND_REPORTER_EMAIL_ARE_REQUIRED: &str = "caseNumberAndReporterEmailAreRequired";
+pub const CASE_OBJECTION_ALREADY_FILED: &str = "caseObjectionAlreadyFiled";
+pub const CASE_OBJECTION_NOT_POSSIBLE: &str = "caseObjectionNotPossible";
 pub const CATALOG_STOCK_EXHAUSTED: &str = "catalogStockExhausted";
 pub const CATEGORY_AND_RATING_ARE_REQUIRED: &str = "categoryAndRatingAreRequired";
 pub const CATEGORY_HAS_SUBCATEGORIES_REMOVE_OR_MOVE_THEM_FIRST: &str = "categoryHasSubcategoriesRemoveOrMoveThemFirst";
@@ -342,56 +346,142 @@ pub const CONSOLE_STREAMING_IS_NOT_SUPPORTED_FOR_THIS_PROVIDER: &str = "consoleS
 pub const CONSOLE_STREAMING_ONLY_SUPPORTED_FOR_PTERODACTYL_SERVICES: &str = "consoleStreamingOnlySupportedForPterodactylServices";
 pub const CONSOLE_TEMPORARILY_UNAVAILABLE_PLEASE_TRY_AGAIN: &str = "consoleTemporarilyUnavailablePleaseTryAgain";
 pub const CONTACTS_NOT_EDITABLE_IN_STATUS: &str = "contactsNotEditableInStatus";
+pub const CONTAINER_ALLOCATION_REQUIRED: &str = "containerAllocationRequired";
+pub const CONTAINER_API_KEY_NAME_REQUIRED: &str = "containerApiKeyNameRequired";
+pub const CONTAINER_API_KEY_REQUIRED: &str = "containerApiKeyRequired";
+pub const CONTAINER_API_KEY_SCOPES_REQUIRED: &str = "containerApiKeyScopesRequired";
+pub const CONTAINER_BACKEND_NAME_REQUIRED: &str = "containerBackendNameRequired";
+pub const CONTAINER_BACKUP_NOT_DOWNLOADABLE: &str = "containerBackupNotDownloadable";
+pub const CONTAINER_BACKUP_NOT_FOUND: &str = "containerBackupNotFound";
+pub const CONTAINER_BACKUP_KEEP_INVALID: &str = "containerBackupKeepInvalid";
+pub const CONTAINER_BACKUP_LIMIT_REACHED: &str = "containerBackupLimitReached";
+pub const CONTAINER_BACKUP_RETENTION_INVALID: &str = "containerBackupRetentionInvalid";
+pub const CONTAINER_BACKUP_TIMEZONE_INVALID: &str = "containerBackupTimezoneInvalid";
+pub const CONTAINER_BILLING_CYCLE_MISSING: &str = "containerBillingCycleMissing";
 pub const CONTAINER_BILLING_MISSING: &str = "containerBillingMissing";
+pub const CONTAINER_BILLING_OWNER_MISSING: &str = "containerBillingOwnerMissing";
 pub const CONTAINER_BILLING_REQUIRED: &str = "containerBillingRequired";
 pub const CONTAINER_BUSINESS_ONLY: &str = "containerBusinessOnly";
-pub const CONTAINER_DOKPLOY_NOT_CONNECTED: &str = "containerDokployNotConnected";
-pub const CONTAINER_DOKPLOY_PROJECT_INCOMPLETE: &str = "containerDokployProjectIncomplete";
-pub const CONTAINER_DOKPLOY_REJECTED: &str = "containerDokployRejected";
-pub const CONTAINER_DOKPLOY_REQUEST_FAILED: &str = "containerDokployRequestFailed";
-pub const CONTAINER_DOKPLOY_RESOURCE_NOT_FOUND: &str = "containerDokployResourceNotFound";
-pub const CONTAINER_DOKPLOY_UNREACHABLE: &str = "containerDokployUnreachable";
-pub const CONTAINER_DOKPLOY_WORKLOAD_ID_MISSING: &str = "containerDokployWorkloadIdMissing";
+pub const CONTAINER_CERTIFICATE_INVALID: &str = "containerCertificateInvalid";
+pub const CONTAINER_CERTIFICATE_KEY_INVALID: &str = "containerCertificateKeyInvalid";
+pub const CONTAINER_COMPOSE_DISABLED: &str = "containerComposeDisabled";
+pub const CONTAINER_COMPOSE_YAML_REQUIRED: &str = "containerComposeYamlRequired";
+pub const CONTAINER_CONSOLE_COMMAND_FAILED: &str = "containerConsoleCommandFailed";
+pub const CONTAINER_CONSOLE_COMMAND_REQUIRED: &str = "containerConsoleCommandRequired";
+pub const CONTAINER_DATABASE_HOST_REQUIRED: &str = "containerDatabaseHostRequired";
+pub const CONTAINER_DATABASE_NAME_REQUIRED: &str = "containerDatabaseNameRequired";
+pub const CONTAINER_DATABASE_PORT_INVALID: &str = "containerDatabasePortInvalid";
+pub const CONTAINER_DOMAIN_NOT_FOUND: &str = "containerDomainNotFound";
+pub const CONTAINER_EMAIL_BODY_REQUIRED: &str = "containerEmailBodyRequired";
+pub const CONTAINER_EMAIL_ID_REQUIRED: &str = "containerEmailIdRequired";
+pub const CONTAINER_EMAIL_SUBJECT_REQUIRED: &str = "containerEmailSubjectRequired";
 pub const CONTAINER_ENV_DUPLICATE_KEY: &str = "containerEnvDuplicateKey";
 pub const CONTAINER_ENV_INVALID_KEY: &str = "containerEnvInvalidKey";
 pub const CONTAINER_ENV_READ_FAILED: &str = "containerEnvReadFailed";
 pub const CONTAINER_ENV_SAVE_FAILED: &str = "containerEnvSaveFailed";
 pub const CONTAINER_ENV_UNSUPPORTED_KIND: &str = "containerEnvUnsupportedKind";
 pub const CONTAINER_ENVIRONMENT_MISSING: &str = "containerEnvironmentMissing";
+pub const CONTAINER_EVENT_NOT_FOUND: &str = "containerEventNotFound";
 pub const CONTAINER_FILE_DELETE_FAILED: &str = "containerFileDeleteFailed";
 pub const CONTAINER_FILE_READ_FAILED: &str = "containerFileReadFailed";
 pub const CONTAINER_FILE_WRITE_FAILED: &str = "containerFileWriteFailed";
 pub const CONTAINER_FILES_READ_FAILED: &str = "containerFilesReadFailed";
 pub const CONTAINER_FUND_MISSING: &str = "containerFundMissing";
+pub const CONTAINER_GATEWAY_TOKEN_LABEL_REQUIRED: &str = "containerGatewayTokenLabelRequired";
+pub const CONTAINER_GIT_CREDENTIAL_NAME_REQUIRED: &str = "containerGitCredentialNameRequired";
+pub const CONTAINER_GIT_REPO_REQUIRED: &str = "containerGitRepoRequired";
+pub const CONTAINER_GIT_SOURCE_NAME_REQUIRED: &str = "containerGitSourceNameRequired";
+pub const CONTAINER_GIT_TOKEN_REQUIRED: &str = "containerGitTokenRequired";
 pub const CONTAINER_HOST_PORT_INVALID: &str = "containerHostPortInvalid";
 pub const CONTAINER_HOST_PORT_TAKEN: &str = "containerHostPortTaken";
 pub const CONTAINER_HOSTNAME_INVALID: &str = "containerHostnameInvalid";
 pub const CONTAINER_HOSTNAME_REQUIRED: &str = "containerHostnameRequired";
+pub const CONTAINER_IMAGE_DIGEST_INVALID: &str = "containerImageDigestInvalid";
+pub const CONTAINER_IMAGE_REFERENCE_REQUIRED: &str = "containerImageReferenceRequired";
 pub const CONTAINER_IMPORT_FAILED: &str = "containerImportFailed";
+pub const CONTAINER_INTERCONNECT_NEEDS_TWO_PODS: &str = "containerInterconnectNeedsTwoPods";
+pub const CONTAINER_INTERCONNECT_NOT_FOUND: &str = "containerInterconnectNotFound";
 pub const CONTAINER_INVALID_PATH: &str = "containerInvalidPath";
 pub const CONTAINER_INVOICE_NOT_ENABLED: &str = "containerInvoiceNotEnabled";
+pub const CONTAINER_IP_ADDRESS_INVALID: &str = "containerIpAddressInvalid";
+pub const CONTAINER_IP_ADDRESS_NOT_FOUND: &str = "containerIpAddressNotFound";
+pub const CONTAINER_IP_ADDRESS_REQUIRED: &str = "containerIpAddressRequired";
+pub const CONTAINER_IP_ADDRESS_TAKEN: &str = "containerIpAddressTaken";
+pub const CONTAINER_LISTENER_NAME_REQUIRED: &str = "containerListenerNameRequired";
+pub const CONTAINER_LISTENER_NODE_REQUIRED: &str = "containerListenerNodeRequired";
 pub const CONTAINER_LOGS_DB_HINT: &str = "containerLogsDbHint";
 pub const CONTAINER_LOGS_NO_COMPOSE_CONTAINER: &str = "containerLogsNoComposeContainer";
 pub const CONTAINER_LOGS_READ_FAILED: &str = "containerLogsReadFailed";
 pub const CONTAINER_LOGS_UNAVAILABLE: &str = "containerLogsUnavailable";
+pub const CONTAINER_METRICS_GRACE_CONFIRMATION_REQUIRED: &str = "containerMetricsGraceConfirmationRequired";
+pub const CONTAINER_METRICS_RETENTION_INVALID: &str = "containerMetricsRetentionInvalid";
 pub const CONTAINER_NAME_REQUIRED: &str = "containerNameRequired";
+pub const CONTAINER_NETWORK_CIDR_INVALID: &str = "containerNetworkCidrInvalid";
 pub const CONTAINER_NETWORK_NAME_REQUIRED: &str = "containerNetworkNameRequired";
+pub const CONTAINER_NETWORK_NOT_FOUND: &str = "containerNetworkNotFound";
 pub const CONTAINER_NO_REACHABLE_WORKER: &str = "containerNoReachableWorker";
 pub const CONTAINER_NO_WORKER_IN_REGION: &str = "containerNoWorkerInRegion";
 pub const CONTAINER_NOT_RUNNING: &str = "containerNotRunning";
 pub const CONTAINER_NOT_RUNNING_DEPLOY_FIRST: &str = "containerNotRunningDeployFirst";
 pub const CONTAINER_OVERDUE_ACTION_BLOCKED: &str = "containerOverdueActionBlocked";
 pub const CONTAINER_PATH_REQUIRED: &str = "containerPathRequired";
+pub const CONTAINER_PERMISSION_DENIED: &str = "containerPermissionDenied";
+pub const CONTAINER_PORT_FORWARD_NOT_FOUND: &str = "containerPortForwardNotFound";
+pub const CONTAINER_PORT_FORWARD_NOT_NEEDED_ON_FLOATING: &str = "containerPortForwardNotNeededOnFloating";
+pub const CONTAINER_PORT_NOT_FOUND: &str = "containerPortNotFound";
 pub const CONTAINER_PROJECT_NAME_REQUIRED: &str = "containerProjectNameRequired";
 pub const CONTAINER_PROJECT_NOT_FOUND: &str = "containerProjectNotFound";
+pub const CONTAINER_PROJECT_NOT_PROVISIONED: &str = "containerProjectNotProvisioned";
+pub const CONTAINER_RDNS_INVALID: &str = "containerRdnsInvalid";
+pub const CONTAINER_RDNS_NO_REVERSE_ZONE: &str = "containerRdnsNoReverseZone";
 pub const CONTAINER_REGION_API_KEY_MISSING: &str = "containerRegionApiKeyMissing";
 pub const CONTAINER_REGION_UNAVAILABLE: &str = "containerRegionUnavailable";
+pub const CONTAINER_REVISION_NOT_FOUND: &str = "containerRevisionNotFound";
+pub const CONTAINER_REVISION_PINNED: &str = "containerRevisionPinned";
+pub const CONTAINER_RUNTIME_GROUP_NAME_REQUIRED: &str = "containerRuntimeGroupNameRequired";
+pub const CONTAINER_RUNTIME_GROUP_SLUG_INVALID: &str = "containerRuntimeGroupSlugInvalid";
+pub const CONTAINER_SCHEDULE_ACTIONS_REQUIRED: &str = "containerScheduleActionsRequired";
+pub const CONTAINER_SCHEDULE_CRON_INVALID: &str = "containerScheduleCronInvalid";
+pub const CONTAINER_SCHEDULE_NAME_REQUIRED: &str = "containerScheduleNameRequired";
+pub const CONTAINER_SERVICE_NOT_ON_CONTROL_PLANE: &str = "containerServiceNotOnControlPlane";
+pub const CONTAINER_SERVICE_POD_MISSING: &str = "containerServicePodMissing";
+pub const CONTAINER_SSH_KEY_DUPLICATE: &str = "containerSshKeyDuplicate";
+pub const CONTAINER_SSH_KEY_GENERATE_FAILED: &str = "containerSshKeyGenerateFailed";
+pub const CONTAINER_SSH_KEY_INVALID: &str = "containerSshKeyInvalid";
+pub const CONTAINER_SSH_KEY_NAME_REQUIRED: &str = "containerSshKeyNameRequired";
+pub const CONTAINER_SSH_KEY_NOT_FOUND: &str = "containerSshKeyNotFound";
+pub const CONTAINER_SUB_TENANT_NESTING_FORBIDDEN: &str = "containerSubTenantNestingForbidden";
+pub const CONTAINER_TARGET_IP_REQUIRED: &str = "containerTargetIpRequired";
+pub const CONTAINER_TARGET_NODE_REQUIRED: &str = "containerTargetNodeRequired";
 pub const CONTAINER_TARGET_PORT_INVALID: &str = "containerTargetPortInvalid";
+pub const CONTAINER_TEMPLATE_DEFINITION_REQUIRED: &str = "containerTemplateDefinitionRequired";
 pub const CONTAINER_TEMPLATE_DEPLOY_FAILED: &str = "containerTemplateDeployFailed";
+pub const CONTAINER_TEMPLATE_FEED_SIGNATURE_REQUIRED: &str = "containerTemplateFeedSignatureRequired";
+pub const CONTAINER_TEMPLATE_NAME_REQUIRED: &str = "containerTemplateNameRequired";
+pub const CONTAINER_TEMPLATE_NOT_FOUND: &str = "containerTemplateNotFound";
+pub const CONTAINER_TEMPLATE_NOT_PUBLISHED: &str = "containerTemplateNotPublished";
+pub const CONTAINER_TEMPLATE_SCHEMA_INVALID: &str = "containerTemplateSchemaInvalid";
+pub const CONTAINER_TEMPLATE_VERSION_REQUIRED: &str = "containerTemplateVersionRequired";
+pub const CONTAINER_TEMPLATES_DISABLED: &str = "containerTemplatesDisabled";
 pub const CONTAINER_TEMPLATES_LOAD_FAILED: &str = "containerTemplatesLoadFailed";
 pub const CONTAINER_TENANT_CREATE_FAILED: &str = "containerTenantCreateFailed";
+pub const CONTAINER_TENANT_NAME_REQUIRED: &str = "containerTenantNameRequired";
+pub const CONTAINER_TENANT_NOT_ACCESSIBLE: &str = "containerTenantNotAccessible";
+pub const CONTAINER_TOKEN_AMOUNT_INVALID: &str = "containerTokenAmountInvalid";
+pub const CONTAINER_TOKEN_CREDIT_LIMIT_REACHED: &str = "containerTokenCreditLimitReached";
+pub const CONTAINER_TRANSFER_KEY_LABEL_REQUIRED: &str = "containerTransferKeyLabelRequired";
+pub const CONTAINER_TRANSFER_KEY_REQUIRED: &str = "containerTransferKeyRequired";
 pub const CONTAINER_UNKNOWN_ACTION: &str = "containerUnknownAction";
 pub const CONTAINER_UNKNOWN_FILE_ACTION: &str = "containerUnknownFileAction";
+pub const CONTAINER_USAGE_WINDOW_INVALID: &str = "containerUsageWindowInvalid";
+pub const CONTAINER_VOLUME_NAME_REQUIRED: &str = "containerVolumeNameRequired";
+pub const CONTAINER_VOLUME_NOT_FOUND: &str = "containerVolumeNotFound";
+pub const CONTAINER_VOLUME_SHRINK_FORBIDDEN: &str = "containerVolumeShrinkForbidden";
+pub const CONTAINER_VOLUME_SIZE_INVALID: &str = "containerVolumeSizeInvalid";
+pub const CONTAINER_WALLET_CREATE_FAILED: &str = "containerWalletCreateFailed";
+pub const CONTAINER_WALLET_MISSING: &str = "containerWalletMissing";
+pub const CONTAINER_WEBHOOK_DELIVERY_INVALID: &str = "containerWebhookDeliveryInvalid";
+pub const CONTAINER_WEBHOOK_URL_INVALID: &str = "containerWebhookUrlInvalid";
 pub const CONTAINER_WORKLOAD_NOT_CONNECTED: &str = "containerWorkloadNotConnected";
 pub const CONTAINER_WORKLOAD_NOT_FOUND: &str = "containerWorkloadNotFound";
 pub const CONTAINER_WORKLOAD_NOT_IN_PROJECT: &str = "containerWorkloadNotInProject";
@@ -448,6 +538,10 @@ pub const CPU_BELOW_PRODUCT_BASE: &str = "cpuBelowProductBase";
 pub const CPU_CANNOT_BE_BELOW_PRODUCT_BASE_BASE_VCORES_V_CORES: &str = "cpuCannotBeBelowProductBaseBaseVcoresVCores";
 pub const CPU_DOWNGRADE_NOT_ALLOWED_FOR_THIS_PRODUCT: &str = "cpuDowngradeNotAllowedForThisProduct";
 pub const CPU_UPGRADE_DOWNGRADE_NOT_ALLOWED_FOR_THIS_PRODUCT: &str = "cpuUpgradeDowngradeNotAllowedForThisProduct";
+pub const CREDIT_CHECK_CONSENT_REQUIRED: &str = "creditCheckConsentRequired";
+pub const CREDIT_CHECK_DISABLED: &str = "creditCheckDisabled";
+pub const CREDIT_CHECK_FAILED: &str = "creditCheckFailed";
+pub const CREDIT_CHECK_NOT_CONFIGURED: &str = "creditCheckNotConfigured";
 pub const CREDIT_LIMIT_EXCEEDED: &str = "creditLimitExceeded";
 pub const CREDIT_NOTE_IS_NOT_IN_DRAFT_STATUS: &str = "creditNoteIsNotInDraftStatus";
 pub const CREDIT_NOTE_NOT_FOUND: &str = "creditNoteNotFound";
@@ -950,6 +1044,25 @@ pub const IDENT_VERIFICATION_REQUEST_FAILED: &str = "identVerificationRequestFai
 pub const IDENT_VERIFICATION_REQUIRED_FOR_FAMILY: &str = "identVerificationRequiredForFamily";
 pub const IF_AN_ACCOUNT_WITH_THAT_EMAIL_EXISTS_WE_VE_SENT_A_PASSWORD_RESET_LINK: &str = "ifAnAccountWithThatEmailExistsWeVeSentAPasswordResetLink";
 pub const IF_THE_EMAIL_EXISTS_A_CODE_HAS_BEEN_SENT: &str = "ifTheEmailExistsACodeHasBeenSent";
+pub const IGNITE_CONTAINERS_AGENT_UNAVAILABLE: &str = "igniteContainersAgentUnavailable";
+pub const IGNITE_CONTAINERS_BACKUP_RESTORE_STARTED: &str = "igniteContainersBackupRestoreStarted";
+pub const IGNITE_CONTAINERS_BACKUP_STARTED: &str = "igniteContainersBackupStarted";
+pub const IGNITE_CONTAINERS_CONFLICT: &str = "igniteContainersConflict";
+pub const IGNITE_CONTAINERS_LIMITS_APPLIED: &str = "igniteContainersLimitsApplied";
+pub const IGNITE_CONTAINERS_NO_CAPACITY: &str = "igniteContainersNoCapacity";
+pub const IGNITE_CONTAINERS_NODES_SYNCED: &str = "igniteContainersNodesSynced";
+pub const IGNITE_CONTAINERS_NOT_CONNECTED: &str = "igniteContainersNotConnected";
+pub const IGNITE_CONTAINERS_NOT_IMPLEMENTED: &str = "igniteContainersNotImplemented";
+pub const IGNITE_CONTAINERS_POD_MISSING: &str = "igniteContainersPodMissing";
+pub const IGNITE_CONTAINERS_RATE_LIMITED: &str = "igniteContainersRateLimited";
+pub const IGNITE_CONTAINERS_REINSTALL_STARTED: &str = "igniteContainersReinstallStarted";
+pub const IGNITE_CONTAINERS_REJECTED: &str = "igniteContainersRejected";
+pub const IGNITE_CONTAINERS_REQUEST_FAILED: &str = "igniteContainersRequestFailed";
+pub const IGNITE_CONTAINERS_RESOURCE_NOT_FOUND: &str = "igniteContainersResourceNotFound";
+pub const IGNITE_CONTAINERS_TEMPLATE_MISSING: &str = "igniteContainersTemplateMissing";
+pub const IGNITE_CONTAINERS_TIMEOUT: &str = "igniteContainersTimeout";
+pub const IGNITE_CONTAINERS_UNREACHABLE: &str = "igniteContainersUnreachable";
+pub const IGNITE_CONTAINERS_VALIDATION_FAILED: &str = "igniteContainersValidationFailed";
 pub const IMAGE_NOT_AVAILABLE: &str = "imageNotAvailable";
 pub const IMAGE_NOT_AVAILABLE2: &str = "imageNotAvailable2";
 pub const IMPORT_FAILED: &str = "importFailed";
@@ -1157,10 +1270,12 @@ pub const INVOICE_HAS_NO_LINKED_LEXWARE_DOCUMENT: &str = "invoiceHasNoLinkedLexw
 pub const INVOICE_NOT_FOUND: &str = "invoiceNotFound";
 pub const INVOICE_NOT_FOUND2: &str = "invoiceNotFound2";
 pub const INVOICE_PAYMENT_BLOCKED_FOR_ACCOUNT: &str = "invoicePaymentBlockedForAccount";
+pub const INVOICE_SETTLEMENT_FAILED: &str = "invoiceSettlementFailed";
 pub const INVOICE_WAS_NOT_PAID: &str = "invoiceWasNotPaid";
 pub const INVOICE_WAS_VOIDED_AND_CANNOT_BE_PAID: &str = "invoiceWasVoidedAndCannotBePaid";
 pub const INVOICING_PROVIDER_OPERATION_UNSUPPORTED: &str = "invoicingProviderOperationUnsupported";
 pub const IP_ADDRESS_REQUIRED: &str = "ipAddressRequired";
+pub const IP_ALLOCATION_FAILED: &str = "ipAllocationFailed";
 pub const IP_CANCEL_ALREADY_SCHEDULED: &str = "ipCancelAlreadyScheduled";
 pub const IP_CANCEL_NO_SUBSCRIPTION: &str = "ipCancelNoSubscription";
 pub const IP_CANCEL_NOT_ALLOWED: &str = "ipCancelNotAllowed";
@@ -1177,11 +1292,13 @@ pub const IP_DNS_PTR_CONTENT_REQUIRED: &str = "ipDnsPtrContentRequired";
 pub const IP_DNS_RECORD_NOT_FOUND: &str = "ipDnsRecordNotFound";
 pub const IP_FLOW_METRICS_INVALID_IPV4: &str = "ipFlowMetricsInvalidIpv4";
 pub const IP_FLOW_METRICS_INVALID_OCTET: &str = "ipFlowMetricsInvalidOctet";
+pub const IP_VERSION_OR_RESERVATION_ID_IS_REQUIRED: &str = "ipVersionOrReservationIdIsRequired";
 pub const IPAM_INVALID_IPV4_BASE_ADDRESS: &str = "ipamInvalidIpv4BaseAddress";
 pub const IPAM_INVALID_IPV4_CIDR: &str = "ipamInvalidIpv4Cidr";
 pub const IPAM_INVALID_IPV6_BASE_ADDRESS: &str = "ipamInvalidIpv6BaseAddress";
 pub const IPAM_INVALID_IPV6_CIDR: &str = "ipamInvalidIpv6Cidr";
 pub const IPAM_IPV4_ASSIGNMENT_FAILED: &str = "ipamIpv4AssignmentFailed";
+pub const IPAM_IPV4_RANGE_OVERLAPS_EXISTING: &str = "ipamIpv4RangeOverlapsExisting";
 pub const IPAM_IPV6_SUBNET_CALCULATION_FAILED: &str = "ipamIpv6SubnetCalculationFailed";
 pub const IPAM_NO_FREE_IPV4_IN_TARGET_RANGE: &str = "ipamNoFreeIpv4InTargetRange";
 pub const IPAM_NO_FREE_IPV6_SUBNET: &str = "ipamNoFreeIpv6Subnet";
@@ -1327,6 +1444,7 @@ pub const MONITORING_NO_IPV6_SUBNET: &str = "monitoringNoIpv6Subnet";
 pub const MONITORING_PLUS_REQUIRED: &str = "monitoringPlusRequired";
 pub const MONITORING_TARGET_ALREADY_EXISTS: &str = "monitoringTargetAlreadyExists";
 pub const MONITORING_TARGET_NOT_FOUND: &str = "monitoringTargetNotFound";
+pub const MONTHLY_CHARGE_MUST_BE_A_NON_NEGATIVE_NUMBER: &str = "monthlyChargeMustBeANonNegativeNumber";
 pub const MONTHLY_OFFERS_CONFIG_INVALID: &str = "monthlyOffersConfigInvalid";
 pub const MONTHLY_PRICE_MUST_BE_A_NON_NEGATIVE_NUMBER: &str = "monthlyPriceMustBeANonNegativeNumber";
 pub const NAME_ADDRESS_AUTOMATED_CHECK_DECLINED: &str = "nameAddressAutomatedCheckDeclined";
@@ -1458,6 +1576,7 @@ pub const NOTIFICATION_NOT_FOUND: &str = "notificationNotFound";
 pub const OAUTH_LINK_FAILED: &str = "oauthLinkFailed";
 pub const OAUTH_PROVIDER_NOT_FOUND: &str = "oauthProviderNotFound";
 pub const OAUTH_PROVIDER_NOT_FOUND_OR_DISABLED: &str = "oauthProviderNotFoundOrDisabled";
+pub const OBJECTION_TEXT_TOO_SHORT: &str = "objectionTextTooShort";
 pub const OFFER_ALREADY_ACCEPTED: &str = "offerAlreadyAccepted";
 pub const OFFER_ALREADY_REJECTED: &str = "offerAlreadyRejected";
 pub const OFFER_HAS_EXPIRED: &str = "offerHasExpired";
@@ -1752,6 +1871,8 @@ pub const REINSTALL_NOT_SUPPORTED_FOR_THIS_PROVIDER: &str = "reinstallNotSupport
 pub const REINSTALLATION_IS_ALREADY_IN_PROGRESS_PLEASE_WAIT_UNTIL_THE_CURRENT_OPERATION_C: &str = "reinstallationIsAlreadyInProgressPleaseWaitUntilTheCurrentOperationC";
 pub const REINSTALLATION_IS_ALREADY_IN_PROGRESS_PLEASE_WAIT_UNTIL_THE_CURRENT_OPERATION_C2: &str = "reinstallationIsAlreadyInProgressPleaseWaitUntilTheCurrentOperationC2";
 pub const REJECTION_REASON_IS_REQUIRED: &str = "rejectionReasonIsRequired";
+pub const REJECTION_REASON_REQUIRED: &str = "rejectionReasonRequired";
+pub const REJECTION_REASON_TOO_SHORT: &str = "rejectionReasonTooShort";
 pub const REMOVE_AT_MUST_BE_A_VALID_DATE_IN_THE_FUTURE: &str = "removeAtMustBeAValidDateInTheFuture";
 pub const REMOVE_AT_MUST_BE_A_VALID_DATE_IN_THE_FUTURE2: &str = "removeAtMustBeAValidDateInTheFuture2";
 pub const RENEWAL_BLOCKED_DUE_TO_ADOPTION_DEADLINE_ENFORCEMENT: &str = "renewalBlockedDueToAdoptionDeadlineEnforcement";
@@ -2181,6 +2302,7 @@ pub const UPGRADE_EXCEEDS_ASSIGNED_DISK: &str = "upgradeExceedsAssignedDisk";
 pub const UPGRADE_MAX_I_PV6_EXCEEDED: &str = "upgradeMaxIPv6Exceeded";
 pub const UPGRADE_MAX_IPS_EXCEEDED: &str = "upgradeMaxIpsExceeded";
 pub const UPGRADE_NO_CHANGES_APPLICABLE: &str = "upgradeNoChangesApplicable";
+pub const UPGRADE_NO_SUBSCRIPTION: &str = "upgradeNoSubscription";
 pub const UPGRADE_NOT_ALLOWED: &str = "upgradeNotAllowed";
 pub const UPGRADE_OPTIONS_ARE_ONLY_AVAILABLE_TO_THE_SERVICE_OWNER: &str = "upgradeOptionsAreOnlyAvailableToTheServiceOwner";
 pub const UPGRADE_REQUIRES_CHECKOUT: &str = "upgradeRequiresCheckout";
@@ -2343,6 +2465,8 @@ pub const ALL_API_ERROR_CODES: &[&str] = &[
     ADMIN_SCHEDULED_PERCENT_DISCOUNT_ADDITIONAL_MONTHS_AFTER_FIRST_DISCOUNTE,
     ADMIN_SCHEDULED_PERCENT_DISCOUNT_MUST_BE_AN_OBJECT_OR_NULL,
     ADMIN_SCHEDULED_PERCENT_DISCOUNT_PERCENT_MUST_BE_BETWEEN0_AND100,
+    ADMIN_UPGRADE_EXCEEDS_CATEGORY_LIMIT,
+    ADMIN_UPGRADE_MIXED_DIRECTION_NOT_ALLOWED,
     ADMINS_CANNOT_BE_DELETED,
     ADMINS_CANNOT_BE_DOWNGRADED_TO_A_LOWER_ROLE,
     ADMINS_CANNOT_BE_SUSPENDED_OR_STATUS_CHANGED,
@@ -2553,6 +2677,8 @@ pub const ALL_API_ERROR_CODES: &[&str] = &[
     CART_EMPTY,
     CASE_NOT_FOUND,
     CASE_NUMBER_AND_REPORTER_EMAIL_ARE_REQUIRED,
+    CASE_OBJECTION_ALREADY_FILED,
+    CASE_OBJECTION_NOT_POSSIBLE,
     CATALOG_STOCK_EXHAUSTED,
     CATEGORY_AND_RATING_ARE_REQUIRED,
     CATEGORY_HAS_SUBCATEGORIES_REMOVE_OR_MOVE_THEM_FIRST,
@@ -2630,56 +2756,142 @@ pub const ALL_API_ERROR_CODES: &[&str] = &[
     CONSOLE_STREAMING_ONLY_SUPPORTED_FOR_PTERODACTYL_SERVICES,
     CONSOLE_TEMPORARILY_UNAVAILABLE_PLEASE_TRY_AGAIN,
     CONTACTS_NOT_EDITABLE_IN_STATUS,
+    CONTAINER_ALLOCATION_REQUIRED,
+    CONTAINER_API_KEY_NAME_REQUIRED,
+    CONTAINER_API_KEY_REQUIRED,
+    CONTAINER_API_KEY_SCOPES_REQUIRED,
+    CONTAINER_BACKEND_NAME_REQUIRED,
+    CONTAINER_BACKUP_NOT_DOWNLOADABLE,
+    CONTAINER_BACKUP_NOT_FOUND,
+    CONTAINER_BACKUP_KEEP_INVALID,
+    CONTAINER_BACKUP_LIMIT_REACHED,
+    CONTAINER_BACKUP_RETENTION_INVALID,
+    CONTAINER_BACKUP_TIMEZONE_INVALID,
+    CONTAINER_BILLING_CYCLE_MISSING,
     CONTAINER_BILLING_MISSING,
+    CONTAINER_BILLING_OWNER_MISSING,
     CONTAINER_BILLING_REQUIRED,
     CONTAINER_BUSINESS_ONLY,
-    CONTAINER_DOKPLOY_NOT_CONNECTED,
-    CONTAINER_DOKPLOY_PROJECT_INCOMPLETE,
-    CONTAINER_DOKPLOY_REJECTED,
-    CONTAINER_DOKPLOY_REQUEST_FAILED,
-    CONTAINER_DOKPLOY_RESOURCE_NOT_FOUND,
-    CONTAINER_DOKPLOY_UNREACHABLE,
-    CONTAINER_DOKPLOY_WORKLOAD_ID_MISSING,
+    CONTAINER_CERTIFICATE_INVALID,
+    CONTAINER_CERTIFICATE_KEY_INVALID,
+    CONTAINER_COMPOSE_DISABLED,
+    CONTAINER_COMPOSE_YAML_REQUIRED,
+    CONTAINER_CONSOLE_COMMAND_FAILED,
+    CONTAINER_CONSOLE_COMMAND_REQUIRED,
+    CONTAINER_DATABASE_HOST_REQUIRED,
+    CONTAINER_DATABASE_NAME_REQUIRED,
+    CONTAINER_DATABASE_PORT_INVALID,
+    CONTAINER_DOMAIN_NOT_FOUND,
+    CONTAINER_EMAIL_BODY_REQUIRED,
+    CONTAINER_EMAIL_ID_REQUIRED,
+    CONTAINER_EMAIL_SUBJECT_REQUIRED,
     CONTAINER_ENV_DUPLICATE_KEY,
     CONTAINER_ENV_INVALID_KEY,
     CONTAINER_ENV_READ_FAILED,
     CONTAINER_ENV_SAVE_FAILED,
     CONTAINER_ENV_UNSUPPORTED_KIND,
     CONTAINER_ENVIRONMENT_MISSING,
+    CONTAINER_EVENT_NOT_FOUND,
     CONTAINER_FILE_DELETE_FAILED,
     CONTAINER_FILE_READ_FAILED,
     CONTAINER_FILE_WRITE_FAILED,
     CONTAINER_FILES_READ_FAILED,
     CONTAINER_FUND_MISSING,
+    CONTAINER_GATEWAY_TOKEN_LABEL_REQUIRED,
+    CONTAINER_GIT_CREDENTIAL_NAME_REQUIRED,
+    CONTAINER_GIT_REPO_REQUIRED,
+    CONTAINER_GIT_SOURCE_NAME_REQUIRED,
+    CONTAINER_GIT_TOKEN_REQUIRED,
     CONTAINER_HOST_PORT_INVALID,
     CONTAINER_HOST_PORT_TAKEN,
     CONTAINER_HOSTNAME_INVALID,
     CONTAINER_HOSTNAME_REQUIRED,
+    CONTAINER_IMAGE_DIGEST_INVALID,
+    CONTAINER_IMAGE_REFERENCE_REQUIRED,
     CONTAINER_IMPORT_FAILED,
+    CONTAINER_INTERCONNECT_NEEDS_TWO_PODS,
+    CONTAINER_INTERCONNECT_NOT_FOUND,
     CONTAINER_INVALID_PATH,
     CONTAINER_INVOICE_NOT_ENABLED,
+    CONTAINER_IP_ADDRESS_INVALID,
+    CONTAINER_IP_ADDRESS_NOT_FOUND,
+    CONTAINER_IP_ADDRESS_REQUIRED,
+    CONTAINER_IP_ADDRESS_TAKEN,
+    CONTAINER_LISTENER_NAME_REQUIRED,
+    CONTAINER_LISTENER_NODE_REQUIRED,
     CONTAINER_LOGS_DB_HINT,
     CONTAINER_LOGS_NO_COMPOSE_CONTAINER,
     CONTAINER_LOGS_READ_FAILED,
     CONTAINER_LOGS_UNAVAILABLE,
+    CONTAINER_METRICS_GRACE_CONFIRMATION_REQUIRED,
+    CONTAINER_METRICS_RETENTION_INVALID,
     CONTAINER_NAME_REQUIRED,
+    CONTAINER_NETWORK_CIDR_INVALID,
     CONTAINER_NETWORK_NAME_REQUIRED,
+    CONTAINER_NETWORK_NOT_FOUND,
     CONTAINER_NO_REACHABLE_WORKER,
     CONTAINER_NO_WORKER_IN_REGION,
     CONTAINER_NOT_RUNNING,
     CONTAINER_NOT_RUNNING_DEPLOY_FIRST,
     CONTAINER_OVERDUE_ACTION_BLOCKED,
     CONTAINER_PATH_REQUIRED,
+    CONTAINER_PERMISSION_DENIED,
+    CONTAINER_PORT_FORWARD_NOT_FOUND,
+    CONTAINER_PORT_FORWARD_NOT_NEEDED_ON_FLOATING,
+    CONTAINER_PORT_NOT_FOUND,
     CONTAINER_PROJECT_NAME_REQUIRED,
     CONTAINER_PROJECT_NOT_FOUND,
+    CONTAINER_PROJECT_NOT_PROVISIONED,
+    CONTAINER_RDNS_INVALID,
+    CONTAINER_RDNS_NO_REVERSE_ZONE,
     CONTAINER_REGION_API_KEY_MISSING,
     CONTAINER_REGION_UNAVAILABLE,
+    CONTAINER_REVISION_NOT_FOUND,
+    CONTAINER_REVISION_PINNED,
+    CONTAINER_RUNTIME_GROUP_NAME_REQUIRED,
+    CONTAINER_RUNTIME_GROUP_SLUG_INVALID,
+    CONTAINER_SCHEDULE_ACTIONS_REQUIRED,
+    CONTAINER_SCHEDULE_CRON_INVALID,
+    CONTAINER_SCHEDULE_NAME_REQUIRED,
+    CONTAINER_SERVICE_NOT_ON_CONTROL_PLANE,
+    CONTAINER_SERVICE_POD_MISSING,
+    CONTAINER_SSH_KEY_DUPLICATE,
+    CONTAINER_SSH_KEY_GENERATE_FAILED,
+    CONTAINER_SSH_KEY_INVALID,
+    CONTAINER_SSH_KEY_NAME_REQUIRED,
+    CONTAINER_SSH_KEY_NOT_FOUND,
+    CONTAINER_SUB_TENANT_NESTING_FORBIDDEN,
+    CONTAINER_TARGET_IP_REQUIRED,
+    CONTAINER_TARGET_NODE_REQUIRED,
     CONTAINER_TARGET_PORT_INVALID,
+    CONTAINER_TEMPLATE_DEFINITION_REQUIRED,
     CONTAINER_TEMPLATE_DEPLOY_FAILED,
+    CONTAINER_TEMPLATE_FEED_SIGNATURE_REQUIRED,
+    CONTAINER_TEMPLATE_NAME_REQUIRED,
+    CONTAINER_TEMPLATE_NOT_FOUND,
+    CONTAINER_TEMPLATE_NOT_PUBLISHED,
+    CONTAINER_TEMPLATE_SCHEMA_INVALID,
+    CONTAINER_TEMPLATE_VERSION_REQUIRED,
+    CONTAINER_TEMPLATES_DISABLED,
     CONTAINER_TEMPLATES_LOAD_FAILED,
     CONTAINER_TENANT_CREATE_FAILED,
+    CONTAINER_TENANT_NAME_REQUIRED,
+    CONTAINER_TENANT_NOT_ACCESSIBLE,
+    CONTAINER_TOKEN_AMOUNT_INVALID,
+    CONTAINER_TOKEN_CREDIT_LIMIT_REACHED,
+    CONTAINER_TRANSFER_KEY_LABEL_REQUIRED,
+    CONTAINER_TRANSFER_KEY_REQUIRED,
     CONTAINER_UNKNOWN_ACTION,
     CONTAINER_UNKNOWN_FILE_ACTION,
+    CONTAINER_USAGE_WINDOW_INVALID,
+    CONTAINER_VOLUME_NAME_REQUIRED,
+    CONTAINER_VOLUME_NOT_FOUND,
+    CONTAINER_VOLUME_SHRINK_FORBIDDEN,
+    CONTAINER_VOLUME_SIZE_INVALID,
+    CONTAINER_WALLET_CREATE_FAILED,
+    CONTAINER_WALLET_MISSING,
+    CONTAINER_WEBHOOK_DELIVERY_INVALID,
+    CONTAINER_WEBHOOK_URL_INVALID,
     CONTAINER_WORKLOAD_NOT_CONNECTED,
     CONTAINER_WORKLOAD_NOT_FOUND,
     CONTAINER_WORKLOAD_NOT_IN_PROJECT,
@@ -2736,6 +2948,10 @@ pub const ALL_API_ERROR_CODES: &[&str] = &[
     CPU_CANNOT_BE_BELOW_PRODUCT_BASE_BASE_VCORES_V_CORES,
     CPU_DOWNGRADE_NOT_ALLOWED_FOR_THIS_PRODUCT,
     CPU_UPGRADE_DOWNGRADE_NOT_ALLOWED_FOR_THIS_PRODUCT,
+    CREDIT_CHECK_CONSENT_REQUIRED,
+    CREDIT_CHECK_DISABLED,
+    CREDIT_CHECK_FAILED,
+    CREDIT_CHECK_NOT_CONFIGURED,
     CREDIT_LIMIT_EXCEEDED,
     CREDIT_NOTE_IS_NOT_IN_DRAFT_STATUS,
     CREDIT_NOTE_NOT_FOUND,
@@ -3238,6 +3454,25 @@ pub const ALL_API_ERROR_CODES: &[&str] = &[
     IDENT_VERIFICATION_REQUIRED_FOR_FAMILY,
     IF_AN_ACCOUNT_WITH_THAT_EMAIL_EXISTS_WE_VE_SENT_A_PASSWORD_RESET_LINK,
     IF_THE_EMAIL_EXISTS_A_CODE_HAS_BEEN_SENT,
+    IGNITE_CONTAINERS_AGENT_UNAVAILABLE,
+    IGNITE_CONTAINERS_BACKUP_RESTORE_STARTED,
+    IGNITE_CONTAINERS_BACKUP_STARTED,
+    IGNITE_CONTAINERS_CONFLICT,
+    IGNITE_CONTAINERS_LIMITS_APPLIED,
+    IGNITE_CONTAINERS_NO_CAPACITY,
+    IGNITE_CONTAINERS_NODES_SYNCED,
+    IGNITE_CONTAINERS_NOT_CONNECTED,
+    IGNITE_CONTAINERS_NOT_IMPLEMENTED,
+    IGNITE_CONTAINERS_POD_MISSING,
+    IGNITE_CONTAINERS_RATE_LIMITED,
+    IGNITE_CONTAINERS_REINSTALL_STARTED,
+    IGNITE_CONTAINERS_REJECTED,
+    IGNITE_CONTAINERS_REQUEST_FAILED,
+    IGNITE_CONTAINERS_RESOURCE_NOT_FOUND,
+    IGNITE_CONTAINERS_TEMPLATE_MISSING,
+    IGNITE_CONTAINERS_TIMEOUT,
+    IGNITE_CONTAINERS_UNREACHABLE,
+    IGNITE_CONTAINERS_VALIDATION_FAILED,
     IMAGE_NOT_AVAILABLE,
     IMAGE_NOT_AVAILABLE2,
     IMPORT_FAILED,
@@ -3444,10 +3679,13 @@ pub const ALL_API_ERROR_CODES: &[&str] = &[
     INVOICE_HAS_NO_LINKED_LEXWARE_DOCUMENT,
     INVOICE_NOT_FOUND,
     INVOICE_NOT_FOUND2,
+    INVOICE_PAYMENT_BLOCKED_FOR_ACCOUNT,
+    INVOICE_SETTLEMENT_FAILED,
     INVOICE_WAS_NOT_PAID,
     INVOICE_WAS_VOIDED_AND_CANNOT_BE_PAID,
     INVOICING_PROVIDER_OPERATION_UNSUPPORTED,
     IP_ADDRESS_REQUIRED,
+    IP_ALLOCATION_FAILED,
     IP_CANCEL_ALREADY_SCHEDULED,
     IP_CANCEL_NO_SUBSCRIPTION,
     IP_CANCEL_NOT_ALLOWED,
@@ -3464,11 +3702,13 @@ pub const ALL_API_ERROR_CODES: &[&str] = &[
     IP_DNS_RECORD_NOT_FOUND,
     IP_FLOW_METRICS_INVALID_IPV4,
     IP_FLOW_METRICS_INVALID_OCTET,
+    IP_VERSION_OR_RESERVATION_ID_IS_REQUIRED,
     IPAM_INVALID_IPV4_BASE_ADDRESS,
     IPAM_INVALID_IPV4_CIDR,
     IPAM_INVALID_IPV6_BASE_ADDRESS,
     IPAM_INVALID_IPV6_CIDR,
     IPAM_IPV4_ASSIGNMENT_FAILED,
+    IPAM_IPV4_RANGE_OVERLAPS_EXISTING,
     IPAM_IPV6_SUBNET_CALCULATION_FAILED,
     IPAM_NO_FREE_IPV4_IN_TARGET_RANGE,
     IPAM_NO_FREE_IPV6_SUBNET,
@@ -3614,6 +3854,7 @@ pub const ALL_API_ERROR_CODES: &[&str] = &[
     MONITORING_PLUS_REQUIRED,
     MONITORING_TARGET_ALREADY_EXISTS,
     MONITORING_TARGET_NOT_FOUND,
+    MONTHLY_CHARGE_MUST_BE_A_NON_NEGATIVE_NUMBER,
     MONTHLY_OFFERS_CONFIG_INVALID,
     MONTHLY_PRICE_MUST_BE_A_NON_NEGATIVE_NUMBER,
     NAME_ADDRESS_AUTOMATED_CHECK_DECLINED,
@@ -3745,6 +3986,7 @@ pub const ALL_API_ERROR_CODES: &[&str] = &[
     OAUTH_LINK_FAILED,
     OAUTH_PROVIDER_NOT_FOUND,
     OAUTH_PROVIDER_NOT_FOUND_OR_DISABLED,
+    OBJECTION_TEXT_TOO_SHORT,
     OFFER_ALREADY_ACCEPTED,
     OFFER_ALREADY_REJECTED,
     OFFER_HAS_EXPIRED,
@@ -4039,6 +4281,8 @@ pub const ALL_API_ERROR_CODES: &[&str] = &[
     REINSTALLATION_IS_ALREADY_IN_PROGRESS_PLEASE_WAIT_UNTIL_THE_CURRENT_OPERATION_C,
     REINSTALLATION_IS_ALREADY_IN_PROGRESS_PLEASE_WAIT_UNTIL_THE_CURRENT_OPERATION_C2,
     REJECTION_REASON_IS_REQUIRED,
+    REJECTION_REASON_REQUIRED,
+    REJECTION_REASON_TOO_SHORT,
     REMOVE_AT_MUST_BE_A_VALID_DATE_IN_THE_FUTURE,
     REMOVE_AT_MUST_BE_A_VALID_DATE_IN_THE_FUTURE2,
     RENEWAL_BLOCKED_DUE_TO_ADOPTION_DEADLINE_ENFORCEMENT,
@@ -4468,6 +4712,7 @@ pub const ALL_API_ERROR_CODES: &[&str] = &[
     UPGRADE_MAX_I_PV6_EXCEEDED,
     UPGRADE_MAX_IPS_EXCEEDED,
     UPGRADE_NO_CHANGES_APPLICABLE,
+    UPGRADE_NO_SUBSCRIPTION,
     UPGRADE_NOT_ALLOWED,
     UPGRADE_OPTIONS_ARE_ONLY_AVAILABLE_TO_THE_SERVICE_OWNER,
     UPGRADE_REQUIRES_CHECKOUT,

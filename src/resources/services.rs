@@ -378,6 +378,16 @@ impl ServicesResource {
         self.transport.get(&path, query).await
     }
 
+    /// Generated `GET /services/[id]/console/logs`.
+    pub async fn console_logs(
+        &self,
+        id: &str,
+        query: Option<HashMap<String, String>>,
+    ) -> Result<Value, IgniteError> {
+        let path = format!("/services/{}/console/logs", encode_path(id));
+        self.transport.get(&path, query).await
+    }
+
     /// Generated `GET /services/[id]/console/stream`.
     pub async fn console_stream(
         &self,
@@ -385,6 +395,16 @@ impl ServicesResource {
         query: Option<HashMap<String, String>>,
     ) -> Result<Value, IgniteError> {
         let path = format!("/services/{}/console/stream", encode_path(id));
+        self.transport.get(&path, query).await
+    }
+
+    /// Generated `GET /services/[id]/content/facets`.
+    pub async fn content_facets(
+        &self,
+        id: &str,
+        query: Option<HashMap<String, String>>,
+    ) -> Result<Value, IgniteError> {
+        let path = format!("/services/{}/content/facets", encode_path(id));
         self.transport.get(&path, query).await
     }
 
