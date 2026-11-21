@@ -1,6 +1,6 @@
 [package]
 name = "ignite-api-client"
-version = "3.0.0"
+version = "3.0.2"
 edition = "2021"
 description = "Official ignite API client"
 license-file = "LICENSE.md"
