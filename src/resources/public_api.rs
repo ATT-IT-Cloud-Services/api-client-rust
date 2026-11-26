@@ -224,21 +224,7 @@ impl PublicApiResource {
         self.transport.post("/public/setup/complete", body).await
     }
 
-    /// Generated `GET /public/setup/legal`.
-    pub async fn setup_legal(
-        &self,
-        query: Option<HashMap<String, String>>,
-    ) -> Result<Value, IgniteError> {
-        self.transport.get("/public/setup/legal", query).await
-    }
 
-    /// Generated `PUT /public/setup/legal`.
-    pub async fn replace_setup_legal(
-        &self,
-        body: Option<Value>,
-    ) -> Result<Value, IgniteError> {
-        self.transport.put("/public/setup/legal", body).await
-    }
 
     /// Generated `GET /public/support-hours`.
     pub async fn support_hours(
